@@ -1,0 +1,27 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		},
+		{
+			"path": "./tsconfig.app.json"
+		}
+	],
+	"compilerOptions": {
+    "baseUrl": ".",
+		"composite": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"lib": ["ES2021"],
+		"allowImportingTsExtensions": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"types": ["node"],
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	}
+}
