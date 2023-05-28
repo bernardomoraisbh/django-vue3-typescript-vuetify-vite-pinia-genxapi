@@ -1,0 +1,39 @@
+{
+  "index.css": {
+    "file": "assets/index-316f086a.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "assets": [
+      "assets/logo-7e7c7361.svg"
+    ],
+    "css": [
+      "assets/index-316f086a.css"
+    ],
+    "dynamicImports": [
+      "src/views/AboutView.vue"
+    ],
+    "file": "assets/index-68fbc3a2.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/assets/logo.svg": {
+    "file": "assets/logo-7e7c7361.svg",
+    "src": "src/assets/logo.svg"
+  },
+  "src/views/AboutView.css": {
+    "file": "assets/AboutView-4d995ba2.css",
+    "src": "src/views/AboutView.css"
+  },
+  "src/views/AboutView.vue": {
+    "css": [
+      "assets/AboutView-4d995ba2.css"
+    ],
+    "file": "assets/AboutView-10e37312.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/AboutView.vue"
+  }
+}

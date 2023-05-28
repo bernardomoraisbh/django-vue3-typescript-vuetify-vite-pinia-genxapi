@@ -27,8 +27,11 @@ SECRET_KEY = 'django-insecure-d)h2-1p)0c&5+g6&y-fyxq5&1s&$i1(63i$+50i2lmr2)b_+gf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+# Needed for 'debug' to be available inside templates.
+# https://docs.djangoproject.com/en/3.2/ref/templates/api/#django-template-context-processors-debug
+INTERNAL_IPS = ['127.0.0.1']
 
 # Application definition
 
@@ -51,11 +54,13 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "http://localhost:8000",
     "http://localhost:3001",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8080",
+    "http://localhost:8000",
     "http://localhost:3001",
 ]
 
@@ -150,10 +155,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = 'var/static_root/'
-STATICFILES_DIRS = ['static']
+# Vite App Dir: point it to the folder your vite app is in.
+VITE_APP_DIR = BASE_DIR / "static/genxapi"
 
+# URL prefix for static files.
+STATIC_URL = "/static/"
+# web accessible folder
+STATIC_ROOT = BASE_DIR / "static_root/"
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
