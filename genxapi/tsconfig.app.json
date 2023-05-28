@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["frontend/env.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"],
+  "include": ["frontend/env.d.ts", "frontend/**/*", "frontend/**/*.vue"],
+  "exclude": ["frontend/**/__tests__/*"],
 	"compilerOptions": {
     "baseUrl": ".",
 		"moduleResolution": "node",
@@ -14,7 +14,7 @@
 		"types": ["node", "vuetify"],
 		"paths": {
 			"@/*": [
-				"src/*"
+				"frontend/*"
 			]
 		},
 		"typeRoots": [

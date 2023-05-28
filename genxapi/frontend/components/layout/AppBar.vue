@@ -1,7 +1,7 @@
 <template>
 	<v-app-bar class="AppBar" :elevation="1">
 		<v-app-bar-nav-icon @click="$emit('navIconClicked')" />
-		<h2 @click="$router.push({ path: 'home' })">Exercise Generator</h2>
+		<h2 @click="$router.push({ path: 'home' })" @keydown.enter="$router.push({ path: 'home' })">Exercise Generator</h2>
 	</v-app-bar>
 </template>
 

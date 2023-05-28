@@ -20,21 +20,17 @@ from django.views.generic import TemplateView
 from django.conf import settings
 
 from .views import (
-    homepage,
+	home_view,
 )
 
 urlpatterns = [
-    path('api/', include('account.urls')),
-    path('admin/', admin.site.urls),
-    path('', homepage),
-
-    re_path(
-        '^(?!accounts)(?!admin)(?!static)(?!media).*$',
-        homepage, name='vue-route'),
+	path('', home_view),
+	path('api/', include('account.urls')),
+	path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
-    # test or development mode
-    from django.conf.urls.static import static
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+	# test or development mode
+	from django.conf.urls.static import static
+	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

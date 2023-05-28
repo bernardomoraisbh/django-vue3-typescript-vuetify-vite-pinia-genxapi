@@ -1,6 +1,6 @@
 {
 	"files": [],
-	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "frontend/**/*.ts", "frontend/**/*.d.ts", "frontend/**/*.tsx", "frontend/**/*.vue"],
 	"references": [
 		{
 			"path": "./tsconfig.node.json"
@@ -14,14 +14,14 @@
 		"composite": true,
 		"module": "ESNext",
 		"moduleResolution": "node",
-		"lib": ["ES2021"],
+		"lib": ["esnext", "ES2021"],
 		"allowImportingTsExtensions": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
-		"types": ["node", "vuetify"],
+		"types": ["vite/client", "node", "vuetify"],
 		"paths": {
 			"@/*": [
-				"src/*"
+				"frontend/*"
 			]
 		},
 		"typeRoots": [

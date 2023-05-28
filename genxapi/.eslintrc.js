@@ -18,10 +18,14 @@ module.exports = {
 		ecmaVersion: "latest"
 	},
 	settings: {
-		...createAliasSetting({
-			"@": `${path.resolve(__dirname, "./frontend")}`
-		}),
+		// ...createAliasSetting({
+		// 	"@": `${path.resolve(__dirname, "./frontend")}`
+		// }),
 		"import/resolver": {
+			typescript: {},
+			alias: [
+				["@", "./frontend"],
+			],
 			node: {
 				extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"],
 			},
@@ -137,7 +141,7 @@ module.exports = {
 	},
 	"overrides": [
 		{
-			"files": ["*.vue"],
+			"files": [ "frontend/**/*.vue" ],
 			"rules": {
 				"indent": "off"
 			}

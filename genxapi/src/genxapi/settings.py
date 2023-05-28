@@ -159,16 +159,15 @@ USE_TZ = True
 
 # URL prefix for static files.
 STATIC_URL = "static/"
-STATIC_BASE_DIR = BASE_DIR / 'staticfiles'
-STATIC_CDN_PATH = BASE_DIR.parent / 'static_cdn'
+STATIC_BASE_DIR = BASE_DIR / "static"
 # web accessible folder
-STATIC_ROOT = STATIC_CDN_PATH / 'static'
+STATIC_ROOT =  BASE_DIR.parent / "local-cdn" / "static"
 STATICFILES_DIRS = [
 	STATIC_BASE_DIR,
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = STATIC_CDN_PATH / 'media'
+MEDIA_URL = 'media/'
+MEDIA_ROOT =  BASE_DIR.parent / "local-cdn" / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

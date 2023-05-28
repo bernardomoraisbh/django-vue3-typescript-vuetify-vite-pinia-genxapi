@@ -18,6 +18,8 @@ coverage
 /cypress/screenshots/
 /static_cdn/
 static_cdn
+local-cdn
+/local-cdn/
 
 # Editor directories and files
 .vscode/*

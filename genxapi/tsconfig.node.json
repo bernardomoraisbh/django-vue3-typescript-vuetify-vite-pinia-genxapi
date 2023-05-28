@@ -1,6 +1,6 @@
 {
 	"extends": "@tsconfig/node18/tsconfig.json",
-	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "frontend/**/*.ts", "frontend/**/*.d.ts", "frontend/**/*.tsx", "frontend/**/*.vue"],
 	"compilerOptions": {
     "baseUrl": ".",
 		"composite": true,
@@ -13,7 +13,7 @@
 		"types": ["node", "vuetify"],
 		"paths": {
 			"@/*": [
-				"src/*"
+				"frontend/*"
 			]
 		},
 		"typeRoots": [
