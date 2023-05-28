@@ -10,11 +10,15 @@
 		"lib": ["ES2021"],
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
-		"types": ["node"],
+		"types": ["node", "vuetify"],
 		"paths": {
 			"@/*": [
 				"src/*"
 			]
-		}
+		},
+		"typeRoots": [
+			"./node_modules/@types",
+			"./node_modules/vuetify/types"
+		]
 	}
 }

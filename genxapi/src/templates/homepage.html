@@ -7,7 +7,7 @@
         {% endfor %}
     </head>
     <body>
-        <div id="app"></div>
+        <div id="app" data-token="{{ csrf_token }}"></div>
         {% for file in vue_js_paths %}
             <script src="{% static file %}" type="module"></script>
         {% endfor %}
