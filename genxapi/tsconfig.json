@@ -1,0 +1,28 @@
+{
+	"files": [],
+	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		},
+		{
+			"path": "./tsconfig.app.json"
+		}
+	],
+	"compilerOptions": {
+    "baseUrl": ".",
+		"composite": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"lib": ["ES2021"],
+		"allowImportingTsExtensions": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"types": ["node"],
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	}
+}

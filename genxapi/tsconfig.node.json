@@ -1,0 +1,20 @@
+{
+	"extends": "@tsconfig/node18/tsconfig.json",
+	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"compilerOptions": {
+    "baseUrl": ".",
+		"composite": true,
+		"moduleResolution": "node",
+		"allowImportingTsExtensions": true,
+		"module": "ESNext",
+		"lib": ["ES2021"],
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"types": ["node"],
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	}
+}
