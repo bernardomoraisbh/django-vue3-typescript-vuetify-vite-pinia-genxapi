@@ -5,7 +5,7 @@
 			Exercise Generator
 		</v-app-bar-title>
 		<v-spacer/>
-		<v-btn v-if="isAuthenticated" @click="logout">
+		<v-btn v-if="userStore.isAuthenticated" @click="logout">
 			<span class="mr-2">Sair</span>
 			<v-icon icon="mdi-logout"/>
 		</v-btn>
@@ -25,16 +25,18 @@
 </template>
 
 <script lang="ts" setup>
-	import { computed, ref } from "vue";
+	import { computed } from "vue";
 
 	import { useRouter } from "vue-router";
 
 	import { useTheme } from "vuetify";
 
+	import { useUserStore } from "@/store/user";
+
 	const emit = defineEmits({ navIconClicked: null })
 	const router = useRouter();
-	const isAuthenticated = ref(false);
 	const theme = useTheme();
+	const userStore = useUserStore();
 
 	const goToHome = () => {
 		router.push({ path: "/" })
@@ -43,7 +45,8 @@
 		router.push({ path: "login" })
 	};
 	const logout = () => {
-		router.push({ path: "logout" })
+		userStore.reset();
+		router.push({ path: "login" })
 	};
 	const toggleTheme = () => {
 		theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";

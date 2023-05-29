@@ -1,12 +1,17 @@
 
 // Composables
-import { createApp } from "vue"
+import { createApp } from "vue";
+
+// Utils
+import axios from "axios";
 
 // Components
-import App from "./App.vue"
+import App from "./App.vue";
 
 // Plugins
-import { registerPlugins } from "@/plugins"
+import { registerPlugins } from "@/plugins";
+
+axios.defaults.baseURL = "http://127.0.0.1:8000";
 
 const el = document.getElementById("app")
 
