@@ -164,6 +164,7 @@ STATIC_BASE_DIR = BASE_DIR / "static"
 STATIC_ROOT =  BASE_DIR.parent / "local-cdn" / "static"
 STATICFILES_DIRS = [
 	STATIC_BASE_DIR,
+	os.path.join(BASE_DIR.parent, 'node_modules/@mdi'),
 ]
 
 MEDIA_URL = 'media/'

@@ -11,22 +11,23 @@
 	],
 	"compilerOptions": {
     "baseUrl": ".",
+		"target": "esnext",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
 		"composite": true,
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"lib": ["esnext", "ES2021"],
-		"allowImportingTsExtensions": true,
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+		"lib": ["esnext", "dom"],
 		"types": ["vite/client", "node", "vuetify"],
 		"paths": {
-			"@/*": [
-				"frontend/*"
-			]
+			"@/*": [ "frontend/*" ]
 		},
-		"typeRoots": [
-			"./node_modules/@types",
-			"./node_modules/vuetify/types"
-		]
+		"allowImportingTsExtensions": true,
+		"forceConsistentCasingInFileNames": true
 	}
 }

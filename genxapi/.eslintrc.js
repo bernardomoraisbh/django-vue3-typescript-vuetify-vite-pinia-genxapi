@@ -6,6 +6,9 @@ const createAliasSetting = require("@vue/eslint-config-airbnb/createAliasSetting
 
 module.exports = {
 	root: true,
+	env: {
+		node: true,
+	},
 	plugins: ["import"],
 	"extends": [
 		"plugin:vue/vue3-essential",

@@ -1,24 +1,18 @@
 {
-	"extends": "@tsconfig/node18/tsconfig.json",
 	"include": ["frontend/env.d.ts", "vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "frontend/**/*.ts", "frontend/**/*.d.ts", "frontend/**/*.tsx", "frontend/**/*.vue"],
 	"compilerOptions": {
     "baseUrl": ".",
 		"composite": true,
-		"moduleResolution": "node",
 		"allowImportingTsExtensions": true,
-		"module": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
 		"lib": ["ES2021"],
 		"forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
 		"strict": true,
 		"types": ["node", "vuetify"],
 		"paths": {
-			"@/*": [
-				"frontend/*"
-			]
-		},
-		"typeRoots": [
-			"./node_modules/@types",
-			"./node_modules/vuetify/types"
-		]
+			"@/*": [ "frontend/*" ]
+		}
 	}
 }
