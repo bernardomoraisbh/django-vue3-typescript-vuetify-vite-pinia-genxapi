@@ -26,6 +26,7 @@ from .views import (
 urlpatterns = [
 	path('', home_view),
 	path('api/', include('account.urls')),
+	path('api/exercicios/', include('exercicios.urls')),
 	path('admin/', admin.site.urls),
 ]
 
